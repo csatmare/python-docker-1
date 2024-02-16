@@ -1,5 +1,7 @@
-FROM alpine:3.16.9
+FROM python:3.8-alpine
 
-WORKDIR /usr/local/bin
+WORKDIR /usr/app/src
 
-COPY main.py ./
+COPY app.py ./
+
+CMD [ "python", "./app.py"]
